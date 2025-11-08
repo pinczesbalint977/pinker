@@ -93,7 +93,7 @@ if ('serviceWorker' in navigator) {
     const radios = document.querySelectorAll('#leftColumn input[type="radio"]');
     radios.forEach(r => { if(r.value==='nem') r.checked = true; else r.checked = false; });
     document.getElementById('adatok_tarolasa').checked = false;
-    document.getElementById('hirlevel').checked = false;
+   // document.getElementById('hirlevel').checked = false;
     // clear signature
     ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);
     ctx.fillStyle = '#fff'; ctx.fillRect(0,0,canvas.clientWidth,canvas.clientHeight);
@@ -144,6 +144,7 @@ if ('serviceWorker' in navigator) {
       // mutatjuk a köszönőablakot, majd reset
       modal.classList.add('show');
 
+
     } catch(err){
       console.error('PDF generálási hiba:', err);
       alert('Hiba történt a PDF készítése során. Próbáld újra.');
@@ -161,8 +162,9 @@ if ('serviceWorker' in navigator) {
     return c.toDataURL() === blank.toDataURL();
   }
 
-})();
 
+
+})();
 
 
 
